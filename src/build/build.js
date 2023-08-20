@@ -112,9 +112,7 @@ const uglifyBuildStep = (filename) => {
 
 // Run tsc to create type definitions
 try {
-  child_process.execSync(
-    `npx tsc build/${ENGINE_NAME}.esm.js --declaration --allowJs --emitDeclarationOnly --outFile build/${ENGINE_NAME}.d.ts`
-  );
+  child_process.execSync("npx tsc");
 } catch (e) {
   console.error(e);
   process.exit(1);

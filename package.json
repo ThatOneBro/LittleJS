@@ -2,10 +2,31 @@
   "name": "littlejsengine",
   "version": "1.6.2",
   "description": "LittleJS - Tiny and Fast HTML5 Game Engine",
-  "main": "engine/engine.all.module.js",
+  "main": "build/littlejs.esm.min.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KilledByAPixel/LittleJS.git"
+  },
+  "types": "./build/littlejs.esm.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./build/littlejs.esm.d.ts",
+        "default": "./build/littlejs.esm.min.js"
+      },
+      "require": {
+        "default": "./build/littlejs.min.js"
+      }
+    },
+    "./debug": {
+      "import": {
+        "types": "./build/littlejs.esm.d.ts",
+        "default": "./build/littlejs.esm.js"
+      },
+      "require": {
+        "default": "./build/littlejs.js"
+      }
+    }
   },
   "keywords": [
     "HTML5",
